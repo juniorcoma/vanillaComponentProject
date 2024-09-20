@@ -148,6 +148,9 @@ h6 {
   animation-delay: 1.6s;
 }
 
+.header-wrap {
+  margin-bottom: 4.8rem;
+}
 .content-btn_header {
   width: 100%;
   display: flex;
@@ -214,7 +217,6 @@ h6 {
   margin-top: 10rem;
   display: flex;
   flex-direction: column;
-  gap: 4.8rem;
   padding-bottom: 6.4rem;
 }
 
@@ -353,4 +355,70 @@ h6 {
 
 .skill-box > span {
   font-size: 1.6rem;
+}
+
+.project-content_container {
+  display: flex;
+  gap: 6.4rem;
+}
+
+.project-content_container > div {
+  flex: 1;
+}
+
+.project-card {
+  width: 100%;
+  border-radius: 1.6rem;
+  background-color: #31313c;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card.personal {
+  padding: 3.6rem 3.2rem 3.2rem;
+}
+.project-card.team {
+  padding: 3.2rem 4.8rem;
+}
+
+.img-box {
+  display: flex;
+  justify-content: center;
+}
+
+.img-box > .img {
+  width: 50%;
+  aspect-ratio: 1.62/1;
+  background-color: #d9d9d9;
+}
+
+.card-content_wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.text-group_box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.text-group_box strong,
+.text-group_box p {
+  text-align: center;
+}
+
+.text-group_box strong {
+  font-size: 3.2rem;
+}
+
+.text-group_box p {
+  font-size: 2rem;
 }

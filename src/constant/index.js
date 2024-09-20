@@ -81,3 +81,42 @@ export const VERSION_DEPLOYMENT_LIST = [
     imgsrc: '/src/asset/image/Vercel.png',
   },
 ];
+
+export const PROJECT_LIST = {
+  personal: {
+    yoogg: {
+      imgList: [],
+      title: 'YOO.GG',
+      description:
+        'RIOT API를 이용한 리그오브레전드의 모든 챔피언, 로테이션 챔피언, 뮤직비디오에 대한 정보를 찾을 수 있고 소환사를 검색하여 소환사의 다양한 정보를 제공하는 서비스 입니다.',
+      projectPoint: [
+        'Next의 route경로를 구축하여 RIOT API를 요청합니다.',
+        '챔피언, 룬, 아이템 등 정적 데이터는 모두 서버 컴포넌트에서 요청해 빠른 렌더링을 실현하였습니다.',
+        'metaData와 시멘틱 태그를 사용하여 SEO를 높였습니다.',
+      ],
+      technologiesStack: ['TypeScript', 'React', 'Next.js', 'Tailwind'],
+      link: [
+        { name: 'github', link: '/', text: 'YOO.GG 깃허브 바로가기' },
+        { name: 'figma', link: '/', text: 'YOO.GG 피그마 바로가기' },
+        { name: 'site', link: '/', text: 'YOO.GG 사이트 바로가기' },
+      ],
+    },
+    portfolio: {
+      imgList: [],
+      title: 'PORTFOLIO',
+      description: '개인 포트폴리오 페이지입니다.',
+      projectPoint: [
+        '바닐라 자바스크립트로 React처럼 사용해보았습니다.',
+        'class문법를 사용함으로써 객체지향 프로그래밍이 무엇인지 다시 한번 알게 되는 프로젝트였습니다. ',
+        '더불어 라이브러리의 편리함을 다시한번 깨닫는 시간이었습니다.',
+      ],
+      technologiesStack: ['HTML', 'CSS', 'JavaScript'],
+      link: [
+        { name: 'github', link: '/' },
+        { name: 'figma', link: '/' },
+        { name: 'site', link: '/' },
+      ],
+    },
+  },
+  team: {},
+};
