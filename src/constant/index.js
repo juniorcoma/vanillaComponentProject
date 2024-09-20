@@ -74,7 +74,7 @@ export const STYLING_DESIGN_LIST = [
 export const VERSION_DEPLOYMENT_LIST = [
   {
     text: 'Github',
-    imgsrc: '/src/asset/image/Github.png',
+    imgsrc: '/src/asset/image/GitHub.png',
   },
   {
     text: 'Vercel',
