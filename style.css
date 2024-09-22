@@ -49,6 +49,15 @@ h6 {
   font-weight: 400;
 }
 
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 #app {
   width: 100%;
   height: 100%;
@@ -372,6 +381,7 @@ h6 {
   background-color: #31313c;
   display: flex;
   flex-direction: column;
+  height: 65rem;
 }
 
 .project-card.personal {
@@ -396,6 +406,7 @@ h6 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 100%;
 }
 
 .main-content {
@@ -421,4 +432,92 @@ h6 {
 
 .text-group_box p {
   font-size: 2rem;
+}
+
+.point-text_box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.point-text_box > p {
+  text-align: left;
+  font-size: 1.6rem;
+}
+
+.skills-badge_box {
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.skill-badge {
+  background: #5383e8;
+  padding: 0.8rem 1.6rem;
+  font-size: 2rem;
+  border-radius: 0.8rem;
+}
+
+.badge-box {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.link-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-link {
+  padding: 0.8rem 1.6rem;
+  background: #fff;
+  border-radius: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.6rem;
+  color: #000;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+.project-link_img {
+  width: 3.2rem;
+  aspect-ratio: 1/1;
+}
+
+/* img slider css */
+
+.img-slider_container {
+  width: 100%;
+  height: 25rem;
+}
+
+.img-slider_view {
+  margin: auto;
+  width: 50%;
+  max-width: 36.8rem;
+  height: 100%;
+  aspect-ratio: 1.62/1;
+  border-radius: 1.6rem;
+  overflow: hidden;
+}
+
+.img-sliders {
+  display: flex;
+  width: fit-content;
+  height: 100%;
+}
+
+.img-wrap {
+  width: 100%;
+}
+
+.slider-img {
+  width: 36.8rem;
+  height: 100%;
+  object-fit: cover;
 }
