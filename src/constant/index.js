@@ -85,7 +85,7 @@ export const VERSION_DEPLOYMENT_LIST = [
 export const PROJECT_LIST = {
   personal: {
     yoogg: {
-      imgList: [],
+      imgList: Array.from({ length: 6 }, (_, i) => `/src/asset/image/project/yoogg/slider${i + 1}.png`),
       title: 'YOO.GG',
       description:
         'RIOT API를 이용한 리그오브레전드의 모든 챔피언, 로테이션 챔피언, 뮤직비디오에 대한 정보를 찾을 수 있고 소환사를 검색하여 소환사의 다양한 정보를 제공하는 서비스 입니다.',
@@ -95,10 +95,25 @@ export const PROJECT_LIST = {
         'metaData와 시멘틱 태그를 사용하여 SEO를 높였습니다.',
       ],
       technologiesStack: ['TypeScript', 'React', 'Next.js', 'Tailwind'],
-      link: [
-        { name: 'github', link: '/', text: 'YOO.GG 깃허브 바로가기' },
-        { name: 'figma', link: '/', text: 'YOO.GG 피그마 바로가기' },
-        { name: 'site', link: '/', text: 'YOO.GG 사이트 바로가기' },
+      links: [
+        {
+          name: 'github',
+          link: 'https://github.com/juniorcoma/YOO.GG',
+          text: '깃허브 바로가기',
+          imgsrc: '/src/asset/image/GitHub.png',
+        },
+        {
+          name: 'figma',
+          link: 'https://www.figma.com/design/9KoKnbwl1rQLt1jzROwTgq/YOO.GG?node-id=219-144&t=CUEkgz6W6rsyiolQ-1',
+          text: '피그마 바로가기',
+          imgsrc: '/src/asset/image/Figma.png',
+        },
+        {
+          name: 'site',
+          link: 'https://yoo-gg.vercel.app/',
+          text: '사이트 바로가기',
+          imgsrc: '/src/asset/image/Vercel.png',
+        },
       ],
     },
     portfolio: {
@@ -111,10 +126,25 @@ export const PROJECT_LIST = {
         '더불어 라이브러리의 편리함을 다시한번 깨닫는 시간이었습니다.',
       ],
       technologiesStack: ['HTML', 'CSS', 'JavaScript'],
-      link: [
-        { name: 'github', link: '/' },
-        { name: 'figma', link: '/' },
-        { name: 'site', link: '/' },
+      links: [
+        {
+          name: 'github',
+          link: 'https://github.com/juniorcoma/juniorcoma.github.io',
+          text: '깃허브 바로가기',
+          imgsrc: '/src/asset/image/GitHub.png',
+        },
+        {
+          name: 'figma',
+          link: 'https://www.figma.com/design/XStEBdVYnHckc9jeSTJMKS/Portfolio?node-id=10-294&t=Vojg7rgKM1P3uEp6-1',
+          text: '피그마 바로가기',
+          imgsrc: '/src/asset/image/Figma.png',
+        },
+        {
+          name: 'site',
+          link: 'https://juniorcoma.github.io/',
+          text: '사이트 바로가기',
+          imgsrc: '/src/asset/image/Vercel.png',
+        },
       ],
     },
   },
