@@ -30,5 +30,6 @@ export default class Component {
   setState(newState) {
     this.state = newState;
     this.render();
+    this.setEvent();
   }
 }
