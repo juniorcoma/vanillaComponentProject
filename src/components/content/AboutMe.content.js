@@ -18,7 +18,7 @@ export default class AboutMe extends Component {
             <div class='content-wrapper' data-mounted='content-wrapper'>
              <div class='header-wrap' data-mounted='content-wrapper_header'></div>
               <div class='content-box_about'>
-                <div>
+                <div class='about-card'>
                   <figure>
                     <div class='profile-img_box'>
                         <img class='profile-img' src='/src/asset/image/증명사진.jpg' />
@@ -27,6 +27,7 @@ export default class AboutMe extends Component {
                       <p>NAME : 박현우 </p>
                       <p>BRITH : 1998.08.19 </p>
                       <p>ADDRESS : 경상남도 창원시 </p>
+                      <p>MAJOR : 수학 </p>
                       <p>EMAIL : pq120wal39@gmail.com </p>
                       <p>TELL : 010-5686-3892 </p>
                     </figcaption>
@@ -39,67 +40,10 @@ export default class AboutMe extends Component {
                     이력서 보러가기
                   </a>
                 </div>
-                <div>
-                  <h4 class='sub-title'>Skills</h4>
-                  <div class='skill-list_container'>
-                    <div>
-                      <div class='skill-group-text'>Core Web Technologies</div>
-                      <div class='skill-render_box'>
-                        ${DEFAULT_PROGRAMMING_LANGUAGE_LIST.map(item => {
-                          return `
-                          <div class='skill-box'>
-                            <img src='${item.imgsrc}' />
-                            <span>${item.text}</span>
-                          </div>
-                        `;
-                        }).join('')}
-
-                      </div>
-                    </div>
-                    <div>
-                      <div class='skill-group-text'>Frameworks & Libraries</div>
-                      <div class='skill-render_box'>
-                        ${FRAMEWOKRS_LIBRARIES_LIST.map(item => {
-                          return `
-                          <div class='skill-box'>
-                            <img src='${item.imgsrc}' alt='${item.text} image'/>
-                            <span>${item.text}</span>
-                          </div>
-                        `;
-                        }).join('')}
-
-                      </div>
-                    </div>
-                    <div>
-                      <div class='skill-group-text'>Styling & Design</div>
-                      <div class='skill-render_box'>
-                        ${STYLING_DESIGN_LIST.map(item => {
-                          return `
-                          <div class='skill-box'>
-                            <img src='${item.imgsrc}' alt='${item.text} image'/>
-                            <span>${item.text}</span>
-                          </div>
-                        `;
-                        }).join('')}
-
-                      </div>
-                    </div>
-                    <div>
-                      <div class='skill-group-text'>Version Control & Deployment</div>
-                      <div class='skill-render_box'>
-                        ${VERSION_DEPLOYMENT_LIST.map(item => {
-                          return `
-                          <div class='skill-box'>
-                            <img src='${item.imgsrc}' alt='${item.text} image'/>
-                            <span>${item.text}</span>
-                          </div>
-                        `;
-                        }).join('')}
-
-                      </div>
-                    </div>
-                  </div>
-                </div>
+             
+               
+             
+              
               </div>
 
             </div>
