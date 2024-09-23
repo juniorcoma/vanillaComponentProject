@@ -26,10 +26,12 @@ export default class ImgSlider extends Component {
 
   sliderEvent() {
     let index = 1;
-    const sliderWidth = this.$target.querySelector('.img-wrap').clientWidth;
+    const sliderWidth = this.$target.querySelector('.img-slider_view').clientWidth;
     const sliders = this.$target.querySelector('.img-sliders');
     const imgListLength = this.props.imgList.length;
-
+    this.$target.querySelectorAll('.img-wrap').forEach(wrap => {
+      wrap.style.width = `${sliderWidth}px`;
+    });
     const slide = () => {
       sliders.style.transition = 'transform 0.5s ease-in-out';
       sliders.style.transform = `translateX(-${sliderWidth * index}px)`;
