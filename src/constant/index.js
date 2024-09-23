@@ -14,11 +14,11 @@ export const SOCIAL_LIST = [
 export const CONTENT_MENU_LISt = [
   {
     title: 'About Me',
-    description: '나는 누구일까요?',
+    description: '저를 소개합니다.',
   },
   {
-    title: 'Problem-Solving Examples',
-    description: '프로젝트 진행 중 겪었던 문제들을 어떻게 해결했는지 소개합니다.',
+    title: 'My Tech Arsenal',
+    description: '저의 프론트엔드 기술을 소개합니다.',
   },
   {
     title: 'Personal Project',
@@ -26,7 +26,7 @@ export const CONTENT_MENU_LISt = [
   },
   {
     title: 'Team Project',
-    description: '협업 프로젝트의 세부 사항과 팀워크에 대해 다룹니다.',
+    description: '저의 협업 프로젝트를 소개합니다.',
   },
 ];
 
@@ -58,6 +58,14 @@ export const FRAMEWOKRS_LIBRARIES_LIST = [
     text: 'NEXT.js',
     imgsrc: '/src/asset/image/Next.js.png',
   },
+  {
+    text: 'React-query',
+    imgsrc: '/src/asset/image/React-query.png',
+  },
+  {
+    text: 'Zustand',
+    imgsrc: '/src/asset/image/Zustand.png',
+  },
 ];
 
 export const STYLING_DESIGN_LIST = [
@@ -69,6 +77,10 @@ export const STYLING_DESIGN_LIST = [
     text: 'FIGMA',
     imgsrc: '/src/asset/image/Figma.png',
   },
+  {
+    text: 'Styled-component',
+    imgsrc: '/src/asset/image/Styled-component.png',
+  },
 ];
 
 export const VERSION_DEPLOYMENT_LIST = [
@@ -79,6 +91,10 @@ export const VERSION_DEPLOYMENT_LIST = [
   {
     text: 'Vercel',
     imgsrc: '/src/asset/image/Vercel.png',
+  },
+  {
+    text: 'Notion',
+    imgsrc: '/src/asset/image/Notion.png',
   },
 ];
 
@@ -93,6 +109,7 @@ export const PROJECT_LIST = {
         'Next의 route경로를 구축하여 RIOT API를 요청합니다.',
         '챔피언, 룬, 아이템 등 정적 데이터는 모두 서버 컴포넌트에서 요청해 빠른 렌더링을 실현하였습니다.',
         'metaData와 시멘틱 태그를 사용하여 SEO를 높였습니다.',
+        'RIOT에 웹 정식 등록을 요청하여 승인을 받았습니다.',
       ],
       technologiesStack: ['TypeScript', 'React', 'Next.js', 'Tailwind'],
       links: [
@@ -117,12 +134,12 @@ export const PROJECT_LIST = {
       ],
     },
     portfolio: {
-      imgList: Array.from({ length: 6 }, (_, i) => `/src/asset/image/project/yoogg/slider${i + 1}.png`),
+      imgList: Array.from({ length: 5 }, (_, i) => `/src/asset/image/project/portfolio/slider${i + 1}.png`),
       title: 'PORTFOLIO',
       description: '개인 포트폴리오 페이지입니다.',
       projectPoint: [
         '바닐라 자바스크립트로 React처럼 사용해보았습니다.',
-        'class문법를 사용함으로써 객체지향 프로그래밍이 무엇인지 다시 한번 알게 되는 프로젝트였습니다. ',
+        '평소에 사용하지 않던 class문법를 사용함으로써 객체지향 프로그래밍이 무엇인지 다시 한번 알게 되는 프로젝트였습니다.',
         '더불어 라이브러리의 편리함을 다시한번 깨닫는 시간이었습니다.',
       ],
       technologiesStack: ['HTML', 'CSS', 'JavaScript'],

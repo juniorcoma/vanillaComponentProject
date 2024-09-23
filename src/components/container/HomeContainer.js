@@ -2,7 +2,7 @@ import { SOCIAL_LIST } from '../../constant/index.js';
 import Component from '../../core/Component.js';
 import AboutMe from '../content/AboutMe.content.js';
 import PersonalProject from '../content/PersonalProject.content.js';
-import ProblemSolving from '../content/ProblemSolving.content.js';
+import MyTechArsenal from '../content/MyTechArsenal.content.js';
 import TeamProject from '../content/TeamProject.content.js';
 import ContentMenu from '../ContentMenu.js';
 
@@ -16,7 +16,7 @@ export default class HomeContainer extends Component {
     const $PersonalContent = this.$target.querySelector('[data-mounted="content-personal"]');
     const $TeamContent = this.$target.querySelector('[data-mounted="content-team"]');
     new AboutMe($AboutContent, { setStateEvent: setStateEvent.bind(this) });
-    new ProblemSolving($ProblemContent, { setStateEvent: setStateEvent.bind(this) });
+    new MyTechArsenal($ProblemContent, { setStateEvent: setStateEvent.bind(this) });
     new PersonalProject($PersonalContent, { setStateEvent: setStateEvent.bind(this) });
     new TeamProject($TeamContent, { setStateEvent: setStateEvent.bind(this) });
   }
@@ -56,13 +56,5 @@ export default class HomeContainer extends Component {
 
   setStateEvent(value) {
     this.setState(value);
-  }
-
-  setEvent() {
-    if (this.state === 1) {
-      document.body.style.overflow = 'auto';
-    } else {
-      document.body.style.overflow = 'hidden';
-    }
   }
 }
