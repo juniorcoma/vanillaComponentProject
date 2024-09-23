@@ -57,4 +57,12 @@ export default class HomeContainer extends Component {
   setStateEvent(value) {
     this.setState(value);
   }
+
+  setEvent() {
+    if (this.state === 1) {
+      document.body.style.overflow = 'auto';
+    } else {
+      document.body.style.overflow = 'hidden';
+    }
+  }
 }
