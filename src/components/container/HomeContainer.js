@@ -5,6 +5,7 @@ import PersonalProject from '../content/PersonalProject.content.js';
 import MyTechArsenal from '../content/MyTechArsenal.content.js';
 import TeamProject from '../content/TeamProject.content.js';
 import ContentMenu from '../ContentMenu.js';
+import Moblie from '../Moblie.js';
 
 export default class HomeContainer extends Component {
   mounted() {
@@ -15,6 +16,8 @@ export default class HomeContainer extends Component {
     const $ProblemContent = this.$target.querySelector('[data-mounted="content-problem"]');
     const $PersonalContent = this.$target.querySelector('[data-mounted="content-personal"]');
     const $TeamContent = this.$target.querySelector('[data-mounted="content-team"]');
+    const $Moblie = this.$target.querySelector('[data-mounted="moblie-box"]');
+    new Moblie($Moblie, { setStateEvent: setStateEvent.bind(this) });
     new AboutMe($AboutContent, { setStateEvent: setStateEvent.bind(this) });
     new MyTechArsenal($ProblemContent, { setStateEvent: setStateEvent.bind(this) });
     new PersonalProject($PersonalContent, { setStateEvent: setStateEvent.bind(this) });
@@ -22,13 +25,16 @@ export default class HomeContainer extends Component {
   }
 
   initialState() {
-    this.state = false;
+    this.state = { contentState: [false], moblieMenuState: false };
   }
 
   template() {
     return `
-            <div class='container main ${this.state !== false ? 'hidden' : ''}'>
-              <div>
+            <div class='container main ${this.state.contentState[0] !== false ? 'hidden' : ''}'>          
+              <div class='moblie-box' data-mounted='moblie-box'>
+                
+              </div>
+              <div class='intro_wrap'>
                 <h1 class='title'>PARK </br> HYEON WOO</h1>
                 <div class='develop-position'>FRONTEND DEVELOPER</div>
                 <nav class='social-box'>
@@ -45,16 +51,50 @@ export default class HomeContainer extends Component {
                 
               </div>
             </div>
-            <div class='container sub ${this.state !== false ? 'isVisible' : ''}'>
-                <div class='${this.state === 0 ? 'open' : ''}' data-mounted='content-about'></div>
-                <div class='${this.state === 1 ? 'open' : ''}' data-mounted='content-problem'></div>
-                <div class='${this.state === 2 ? 'open' : ''}' data-mounted='content-personal'></div>
-                <div class='${this.state === 3 ? 'open' : ''}' data-mounted='content-team'></div>
-            </div>
+            <div class='sub_pop sub1 ${this.state[0] === 0 ? 'on open' : ''}' data-mounted='content-about'></div>
+            <div class='sub_pop sub2 ${this.state[0] === 1 ? 'on open' : ''}' data-mounted='content-problem'></div>
+            <div class='sub_pop sub3 ${this.state[0] === 2 ? 'on open' : ''}' data-mounted='content-personal'></div>
+            <div class='sub_pop sub4 ${this.state[0] === 3 ? 'on open' : ''}' data-mounted='content-team'></div>
+      
         `;
   }
 
   setStateEvent(value) {
-    this.setState(value);
+    this.setState('contentState', value);
+  }
+
+  setState(name, value) {
+    if (name === 'contentState') {
+      this.state[name].push(value);
+      if (this.state[name].length === 3) {
+        this.state[name].shift();
+      }
+    }
+
+    if (name === 'moblieMenuState') {
+      this.state[name] = !this.state[name];
+    }
+    this.render();
+    this.setEvent();
+  }
+
+  setEvent() {
+    const mainContainer = this.$target.querySelector('.container.main');
+    const sub_pop = this.$target.querySelector(
+      `.sub_pop.sub${this.state.contentState[this.state.contentState.length - 1] + 1}`,
+    );
+    if (this.state.contentState[this.state.contentState.length - 1] !== false) {
+      mainContainer.classList.add('hidden');
+      sub_pop.classList.add('on');
+      sub_pop.classList.add('open');
+    } else {
+      const prev_sub_pop = this.$target.querySelector(`.sub_pop.sub${this.state.contentState[0] + 1}`);
+      prev_sub_pop.classList.remove('open');
+
+      setTimeout(() => {
+        mainContainer.classList.remove('hidden');
+        prev_sub_pop.classList.remove('on');
+      }, 500);
+    }
   }
 }

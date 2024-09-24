@@ -27,9 +27,5 @@ export default class Component {
   }
 
   setEvent() {}
-  setState(newState) {
-    this.state = newState;
-    this.render();
-    this.setEvent();
-  }
+  setState() {}
 }
