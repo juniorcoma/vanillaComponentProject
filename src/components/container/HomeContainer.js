@@ -25,7 +25,7 @@ export default class HomeContainer extends Component {
   }
 
   initialState() {
-    this.state = { contentState: [false], moblieMenuState: false };
+    this.state = { contentState: [false] };
   }
 
   template() {
@@ -64,22 +64,21 @@ export default class HomeContainer extends Component {
   }
 
   setState(name, value) {
-    if (name === 'contentState') {
-      this.state[name].push(value);
-      if (this.state[name].length === 3) {
-        this.state[name].shift();
-      }
+    if (this.state.contentState[this.state.contentState.length - 1] === value) {
+      return;
+    }
+    this.state[name].push(value);
+    if (this.state[name].length === 3) {
+      this.state[name].shift();
     }
 
-    if (name === 'moblieMenuState') {
-      this.state[name] = !this.state[name];
-    }
     this.render();
     this.setEvent();
   }
 
   setEvent() {
     const mainContainer = this.$target.querySelector('.container.main');
+    console.log(this.state.contentState[this.state.contentState.length - 1] + 1);
     const sub_pop = this.$target.querySelector(
       `.sub_pop.sub${this.state.contentState[this.state.contentState.length - 1] + 1}`,
     );
