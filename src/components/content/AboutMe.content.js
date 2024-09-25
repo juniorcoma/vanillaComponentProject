@@ -27,7 +27,7 @@ export default class AboutMe extends Component {
                     </figcaption>
                   </figure>
                   <div class='introduction-box'>
-                    <p>코드를 통해 시각적 요소와 상호작용을 구현하고, 이를 통해 사용자에게 즐거운 경험을 제공하는 과정에서 큰 즐거움과 성취를 느껴 프론트엔드 개발자가 된 박현우입니다.</p>
+                    <p>웹이라는 도화지에 vscode라는 붓을 잡고 코드라는 물감을 찍어 하얗 도화지를 채워나가 만든 그림을 사람들에게 보여주는 것이 즐겁고 뿌듯한 프론트엔드 개발자 박현우입니다.</p>
                     <p>수학에 항상 정답이 있듯이 개발에서도 정답을 찾기위해 끊임없이 고민하여 정답에 가까워지도록 노력하는 것을 좋아하고 어려운 문제에 직면했을 때 그 문제를 해결하기 위해 그 문제를 집중하여 생각하고 해결책을 찾는 것을 좋아합니다.</p>
                   </div>
                   <a href='/src/asset/download/이력서-박현우.pdf' id='resume-link' target='_blank'>
