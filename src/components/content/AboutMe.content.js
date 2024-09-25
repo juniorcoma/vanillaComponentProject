@@ -1,9 +1,3 @@
-import {
-  DEFAULT_PROGRAMMING_LANGUAGE_LIST,
-  FRAMEWOKRS_LIBRARIES_LIST,
-  STYLING_DESIGN_LIST,
-  VERSION_DEPLOYMENT_LIST,
-} from '../../constant/index.js';
 import Component from '../../core/Component.js';
 import ContentHeader from './ContentHeader.js';
 
@@ -40,7 +34,6 @@ export default class AboutMe extends Component {
                     이력서 보러가기
                   </a>
                 </div>
-             
                
              
               
