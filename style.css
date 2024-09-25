@@ -406,6 +406,9 @@ div.open {
 .text-group_box p {
   text-align: center;
 }
+.text-content {
+  margin-bottom: 0.8rem;
+}
 
 .text-group_box strong {
   font-size: 2.8rem;
@@ -566,6 +569,7 @@ div.open {
   }
   .sub_pop {
     overflow: auto;
+    padding: 0 3.2rem;
   }
   .content-wrapper {
     height: fit-content;
@@ -593,7 +597,9 @@ div.open {
 
 @media screen and (max-width: 768px) {
   .container.main {
+    justify-content: flex-start;
     padding: 0 1.6rem;
+    margin-top: 8.4rem;
   }
   .content-list {
     display: none;
@@ -607,7 +613,9 @@ div.open {
   .moblie-box {
     display: block;
   }
-
+  .container.main.hidden .moblie-menu_btn {
+    visibility: hidden;
+  }
   .moblie-menu_btn {
     width: 3.2rem;
     aspect-ratio: 1/1;
@@ -663,5 +671,46 @@ div.open {
   }
   .bottom-line::before {
     transform: translateX(0);
+  }
+
+  .sub_pop {
+    padding: 0 1.6rem;
+  }
+  figure {
+    flex-direction: column;
+    align-items: center;
+  }
+  figcaption {
+    gap: 0.4rem !important;
+  }
+  figcaption > p {
+    text-align: center;
+  }
+  .introduction-box > p {
+    text-align: center;
+  }
+  .about-card > a {
+    width: 100%;
+    text-align: center;
+  }
+  .skill-render_box {
+    flex-wrap: wrap;
+  }
+  .text-wrap {
+    font-size: 2.4rem;
+  }
+  .project-card {
+    padding: 1.6rem !important;
+  }
+  .img-slider_view {
+    flex: 1;
+    max-width: 100% !important;
+  }
+  .project-card.personal .link-box {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  .link-box > a {
+    justify-content: center;
   }
 }
